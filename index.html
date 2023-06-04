@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <!-- <script src="js/zoomcharts.js"></script> -->
+    <!-- <link rel="stylesheet" href="css/reset.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/main.css" type="text/css" /> -->
+
+    <script src="https://cdn.zoomcharts-cloud.com/1/nightly/zoomcharts.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" href="https://panama.zoomcharts.com/styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="https://panama.zoomcharts.com/styles/main.css" type="text/css" />
+</head>
+<body>
+    <content>
+        <div id="netchart"></div>
+    </content>
+    <script>
+
+        $(document).ready(function(){
+            $.getJSON("data/sample.json",function(data){
+
+                // console.log(data.data);
+
+                
+                
+                var ZoomChartsLicense = "ZCP-w4sm9lg0n: Production licence for *.zoomcharts.com";
+                var ZoomChartsLicenseKey = "577dc0aa9e80ab25c83df560952407bfb23369d8c5566347c7" + "b54a64a4fbc45ccf4a1e7dbaf0827249c6676c19c918ed548f67ae225e813c5f57dfdc0709137" + "7b72c6c3883f1ae343abf24153ef77d3470ee58a8d62781eac016e311d12122256184e9b3efed" + "8b7e38d326e1fc10efc599576f803e7a173d128115eb57dabc5f4bf7ae520a50c6963e2ab8c56" + "2fa24fa46d246e57afb5bb129fb4507e738251b644f0bd9235665138f043cbce5acfa8197f934" + "c58e805963693344ff5240ad98d5aba8ed583f5990cd79e109ab23daaf8cba9ac5c3fee0471b2" + "f8f5abff432bff536d8980d582411724f60e01244c8ae94e3e31a4afe4e3322dc9aa5567eabc9";
+                var PanamaZoom;
+                (function(PanamaZoom) {
+                    var App = (function() {
+                        function App() {}
+                        App.run = function() {
+                            this.buildEnvironment();
+                        };
+                        
+                        App.buildEnvironment = function() {
+                            var _this = this;
+                            var bodyHeight = $("body").height();
+                            var headerHeight = $("#header").height();
+                            var chartHeight = bodyHeight - headerHeight;
+                            this.nc = new ZoomCharts.NetChart({
+                                container: "netchart",
+                                area: {
+                                    height: chartHeight,
+                                    style: {
+                                        fillColor: "#F2F2F2"
+                                    }
+                                },
+
+                                data: {
+                                    preloaded: {
+                                        nodes: data.data.preloaded.nodes,
+                                        links: data.data.preloaded.links
+                                    }
+                                },
+
+
+                                /*
+                                
+                                data: {
+                                    preloaded: {
+                                        "nodes": [{
+                                            "id": "2304017001",
+                                            "name": "MU-SETUP MMC",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/company.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#420E00",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "Təşkilat",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "2303308781",
+                                            "name": "NİZAMİ-PETROL Məhdud Məsuliyyətli Cəmiyyəti",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/company.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#420E00",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "Təşkilat",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "2303407621",
+                                            "name": "TEST PRO Məhdud Məsuliyyətli Cəmiyyəti",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/company.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#420E00",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "Təşkilat",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "2302752871",
+                                            "name": "“Ü-KONSALTİNK” MMC",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/company.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#420E00",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "Təşkilat",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "1S6JGM9",
+                                            "name": "ƏLİYEV ÜLFƏT ƏBÜLFƏT OĞLU",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/officer.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#BE4400",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "FŞ",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "4R93ZGE",
+                                            "name": "MƏMMƏDOV CABBAR AYDIN OĞLU",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/officer.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#BE4400",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "FŞ",
+                                            "date": "11/01/2020"
+                                        }, {
+                                            "id": "1XFUP8A",
+                                            "name": "PAŞAYEV MEHDİ FAXRƏDDİN OĞLU",
+                                            style: {
+                                                image: 'https://panama.zoomcharts.com/img/officer.png',
+                                                imageCropping: "fit",
+                                                fillColor: "#BE4400",
+                                                shadowBlur: 6,
+                                                shadowColor: "rgba(0,0,0,0.4)",
+                                                shadowOffsetX: 0,
+                                                shadowOffsetY: 2
+                                            },
+                                            "loaded": true,
+                                            "kontrol1": "FŞ",
+                                            "date": "11/01/2020"
+                                        }],
+                                        "links": [{
+                                            "id": "L01",
+                                            "from": "2304017001",
+                                            "to": "1XFUP8A",
+                                            "type": "Təşkilat-Təsisçi(FŞ)",
+                                            "pay": "100%",
+                                            "color": "#CE9E82",
+                                            "k2": 1
+                                        }, {
+                                            "id": "L02",
+                                            "from": "2304017001",
+                                            "to": "1S6JGM9",
+                                            "type": "Təşkilat-Direktor(FŞ)",
+                                            "pay": "",
+                                            "color": "#2DB0B0",
+                                            "k2": 0
+                                        }, {
+                                            "id": "L03",
+                                            "from": "2303308781",
+                                            "to": "1S6JGM9",
+                                            "type": "Təşkilat-Təsisçi(FŞ)",
+                                            "pay": "100%",
+                                            "color": "#CE9E82",
+                                            "k2": 1
+                                        }, {
+                                            "id": "L04",
+                                            "from": "1S6JGM9",
+                                            "to": "2303308781",
+                                            "type": "Təşkilat-Direktor(FŞ)",
+                                            "pay": "",
+                                            "color": "#2DB0B0",
+                                            "k2": 0
+                                        }, {
+                                            "id": "L05",
+                                            "from": "1S6JGM9",
+                                            "to": "2303407621",
+                                            "type": "Təşkilat-Təsisçi(FŞ)",
+                                            "pay": "100%",
+                                            "color": "#CE9E82",
+                                            "k2": 1
+                                        }, {
+                                            "id": "L06",
+                                            "from": "2303407621",
+                                            "to": "4R93ZGE",
+                                            "type": "Təşkilat-Direktor(FŞ)",
+                                            "pay": "",
+                                            "color": "#2DB0B0",
+                                            "k2": 0
+                                        }, {
+                                            "id": "L07",
+                                            "from": "2302752871",
+                                            "to": "1S6JGM9",
+                                            "type": "Təşkilat-Təsisçi(FŞ)",
+                                            "pay": "100%",
+                                            "color": "#CE9E82",
+                                            "k2": 1
+                                        }, {
+                                            "id": "L08",
+                                            "from": "1S6JGM9",
+                                            "to": "2302752871",
+                                            "type": "Təşkilat-Direktor(FŞ)",
+                                            "pay": "",
+                                            "color": "#2DB0B0",
+                                            "k2": 0
+                                        }]
+                                    }
+                                },
+                                */
+                                
+                                info: {
+                                    enabled: true,
+                                    linkContentsFunction: function(itemData, item) {
+                                        //console.log(item);
+                                        return "<p style='padding-left:5px;padding-right:5px;'>" + item.data.type + item.data.pay + "</p></div>";
+                                    }
+                                },
+                                navigation: {
+                                    initialNodes: ["2304017001"],
+                                    mode: "focusnodes",
+                                    focusNodeExpansionRadius: 1
+                                },
+                                nodeFocused: {
+                                    fillColor: "#E0E0E0"
+                                },
+                                style: {
+                                    multilinkSpacing: 10,
+                                    mode: "radial",
+                                    nodeSpacing: 30,
+                                    node: {
+                                        display: "image",
+                                        imageCropping: "fit",
+                                        fillColor: "#BE4400",
+                                    },
+                                    nodeStyleFunction: function(node) {
+                                        if (node.dataLinks.length > node.links.length) {
+                                            node.items = [{
+                                                px: 0,
+                                                py: -1,
+                                                text: "+",
+                                                backgroundStyle: {
+                                                    fillColor: "orange"
+                                                }
+                                            }];
+                                        } else {
+                                            node.items = [];
+                                        };
+                                        var html = "";
+                                        var x = node.data.name;
+                                        html += "<h4>" + x + "</h4>";
+                                        node.label = (x);
+                                    },
+                                    linkLabel: {
+                                        aspectRatio: null,
+                                        textStyle: {
+                                            font: "8px arial"
+                                        }
+                                    },
+                                    linkStyleFunction: function(link) {
+                                        if (link.data.k2 > 0) {
+                                            link.label = (link.data.type + link.data.pay);
+                                        }
+                                        link.labelStyle.borderRadius = 5;
+                                        link.labelStyle.textStyle.fillColor = "#FFF";
+                                        link.labelStyle.backgroundStyle.fillColor = "#CE9E82";
+                                        link.labelStyle.backgroundStyle.lineColor = "#CE9E82";
+                                        link.toDecoration = "arrow";
+                                        link.fillColor = link.data.color;
+                                        if (link.background) {
+                                            link.fillColor = link.data.color;
+                                            link.radius = 3;
+                                        } else {
+                                            link.radius = 5;
+                                            link.fillColor = link.data.color;
+                                        }
+                                    }
+                                },
+                                nodeMenu: {
+                                    contentsFunction: function(a, b, c) {
+                                        return _this.contentsFunction(a, b, c);
+                                    }
+                                }
+                            });
+                            //this.getInitialNodes();
+                        };
+                        App.contentsFunction = function(data, node, callback) {
+                            var html = "";
+                            var x = node.data;
+                            html += "<b>" + x.kontrol1 + "</b>";
+                            html += "<br/>";
+                            html += "<h4>" + x.name + "</h4>";
+                            html += "<h4>VOEN/FIN</h4>" + x.id + "";
+                            return html;
+                        };
+                        App.nc = null;
+                        App.url_prefix = window.location.href.replace(/\/$/, "");
+                        App.limit = 15;
+                        return App;
+                    }());
+                    PanamaZoom.App = App;
+                    App.run();
+                })(PanamaZoom || (PanamaZoom = {}));
+    
+                
+                
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

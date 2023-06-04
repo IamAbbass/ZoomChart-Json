@@ -1,0 +1,195 @@
+{
+    "data": {
+      "preloaded": {
+        "nodes": [
+          {
+            "id": "2304017001",
+            "name": "MU-SETUP MMC",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/company.png",
+              "imageCropping": "fit",
+              "fillColor": "#420E00",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "Təşkilat",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "2303308781",
+            "name": "NİZAMİ-PETROL Məhdud Məsuliyyətli Cəmiyyəti",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/company.png",
+              "imageCropping": "fit",
+              "fillColor": "#420E00",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "Təşkilat",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "2303407621",
+            "name": "TEST PRO Məhdud Məsuliyyətli Cəmiyyəti",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/company.png",
+              "imageCropping": "fit",
+              "fillColor": "#420E00",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "Təşkilat",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "2302752871",
+            "name": "“Ü-KONSALTİNK” MMC",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/company.png",
+              "imageCropping": "fit",
+              "fillColor": "#420E00",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "Təşkilat",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "1S6JGM9",
+            "name": "ƏLİYEV ÜLFƏT ƏBÜLFƏT OĞLU",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/officer.png",
+              "imageCropping": "fit",
+              "fillColor": "#BE4400",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "FŞ",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "4R93ZGE",
+            "name": "MƏMMƏDOV CABBAR AYDIN OĞLU",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/officer.png",
+              "imageCropping": "fit",
+              "fillColor": "#BE4400",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "FŞ",
+            "date": "11/01/2020"
+          },
+          {
+            "id": "1XFUP8A",
+            "name": "PAŞAYEV MEHDİ FAXRƏDDİN OĞLU",
+            "style": {
+              "image": "https://panama.zoomcharts.com/img/officer.png",
+              "imageCropping": "fit",
+              "fillColor": "#BE4400",
+              "shadowBlur": 6,
+              "shadowColor": "rgba(0,0,0,0.4)",
+              "shadowOffsetX": 0,
+              "shadowOffsetY": 2
+            },
+            "loaded": true,
+            "kontrol1": "FŞ",
+            "date": "11/01/2020"
+          }
+        ],
+        "links": [
+          {
+            "id": "L01",
+            "from": "2304017001",
+            "to": "1XFUP8A",
+            "type": "Təşkilat-Təsisçi(FŞ)",
+            "pay": "100%",
+            "color": "#CE9E82",
+            "k2": 1
+          },
+          {
+            "id": "L02",
+            "from": "2304017001",
+            "to": "1S6JGM9",
+            "type": "Təşkilat-Direktor(FŞ)",
+            "pay": "",
+            "color": "#2DB0B0",
+            "k2": 0
+          },
+          {
+            "id": "L03",
+            "from": "2303308781",
+            "to": "1S6JGM9",
+            "type": "Təşkilat-Təsisçi(FŞ)",
+            "pay": "100%",
+            "color": "#CE9E82",
+            "k2": 1
+          },
+          {
+            "id": "L04",
+            "from": "1S6JGM9",
+            "to": "2303308781",
+            "type": "Təşkilat-Direktor(FŞ)",
+            "pay": "",
+            "color": "#2DB0B0",
+            "k2": 0
+          },
+          {
+            "id": "L05",
+            "from": "1S6JGM9",
+            "to": "2303407621",
+            "type": "Təşkilat-Təsisçi(FŞ)",
+            "pay": "100%",
+            "color": "#CE9E82",
+            "k2": 1
+          },
+          {
+            "id": "L06",
+            "from": "2303407621",
+            "to": "4R93ZGE",
+            "type": "Təşkilat-Direktor(FŞ)",
+            "pay": "",
+            "color": "#2DB0B0",
+            "k2": 0
+          },
+          {
+            "id": "L07",
+            "from": "2302752871",
+            "to": "1S6JGM9",
+            "type": "Təşkilat-Təsisçi(FŞ)",
+            "pay": "100%",
+            "color": "#CE9E82",
+            "k2": 1
+          },
+          {
+            "id": "L08",
+            "from": "1S6JGM9",
+            "to": "2302752871",
+            "type": "Təşkilat-Direktor(FŞ)",
+            "pay": "",
+            "color": "#2DB0B0",
+            "k2": 0
+          }
+        ]
+      }
+    }
+  }
+  
