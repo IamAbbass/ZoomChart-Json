@@ -22,11 +22,6 @@
 
         $(document).ready(function(){
             $.getJSON("data/sample.json",function(data){
-
-                // console.log(data.data);
-
-                
-                
                 var ZoomChartsLicense = "ZCP-w4sm9lg0n: Production licence for *.zoomcharts.com";
                 var ZoomChartsLicenseKey = "577dc0aa9e80ab25c83df560952407bfb23369d8c5566347c7" + "b54a64a4fbc45ccf4a1e7dbaf0827249c6676c19c918ed548f67ae225e813c5f57dfdc0709137" + "7b72c6c3883f1ae343abf24153ef77d3470ee58a8d62781eac016e311d12122256184e9b3efed" + "8b7e38d326e1fc10efc599576f803e7a173d128115eb57dabc5f4bf7ae520a50c6963e2ab8c56" + "2fa24fa46d246e57afb5bb129fb4507e738251b644f0bd9235665138f043cbce5acfa8197f934" + "c58e805963693344ff5240ad98d5aba8ed583f5990cd79e109ab23daaf8cba9ac5c3fee0471b2" + "f8f5abff432bff536d8980d582411724f60e01244c8ae94e3e31a4afe4e3322dc9aa5567eabc9";
                 var PanamaZoom;
@@ -50,194 +45,12 @@
                                         fillColor: "#F2F2F2"
                                     }
                                 },
-
                                 data: {
                                     preloaded: {
                                         nodes: data.data.preloaded.nodes,
                                         links: data.data.preloaded.links
                                     }
                                 },
-
-
-                                /*
-                                
-                                data: {
-                                    preloaded: {
-                                        "nodes": [{
-                                            "id": "2304017001",
-                                            "name": "MU-SETUP MMC",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/company.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#420E00",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "Təşkilat",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "2303308781",
-                                            "name": "NİZAMİ-PETROL Məhdud Məsuliyyətli Cəmiyyəti",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/company.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#420E00",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "Təşkilat",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "2303407621",
-                                            "name": "TEST PRO Məhdud Məsuliyyətli Cəmiyyəti",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/company.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#420E00",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "Təşkilat",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "2302752871",
-                                            "name": "“Ü-KONSALTİNK” MMC",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/company.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#420E00",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "Təşkilat",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "1S6JGM9",
-                                            "name": "ƏLİYEV ÜLFƏT ƏBÜLFƏT OĞLU",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/officer.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#BE4400",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "FŞ",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "4R93ZGE",
-                                            "name": "MƏMMƏDOV CABBAR AYDIN OĞLU",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/officer.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#BE4400",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "FŞ",
-                                            "date": "11/01/2020"
-                                        }, {
-                                            "id": "1XFUP8A",
-                                            "name": "PAŞAYEV MEHDİ FAXRƏDDİN OĞLU",
-                                            style: {
-                                                image: 'https://panama.zoomcharts.com/img/officer.png',
-                                                imageCropping: "fit",
-                                                fillColor: "#BE4400",
-                                                shadowBlur: 6,
-                                                shadowColor: "rgba(0,0,0,0.4)",
-                                                shadowOffsetX: 0,
-                                                shadowOffsetY: 2
-                                            },
-                                            "loaded": true,
-                                            "kontrol1": "FŞ",
-                                            "date": "11/01/2020"
-                                        }],
-                                        "links": [{
-                                            "id": "L01",
-                                            "from": "2304017001",
-                                            "to": "1XFUP8A",
-                                            "type": "Təşkilat-Təsisçi(FŞ)",
-                                            "pay": "100%",
-                                            "color": "#CE9E82",
-                                            "k2": 1
-                                        }, {
-                                            "id": "L02",
-                                            "from": "2304017001",
-                                            "to": "1S6JGM9",
-                                            "type": "Təşkilat-Direktor(FŞ)",
-                                            "pay": "",
-                                            "color": "#2DB0B0",
-                                            "k2": 0
-                                        }, {
-                                            "id": "L03",
-                                            "from": "2303308781",
-                                            "to": "1S6JGM9",
-                                            "type": "Təşkilat-Təsisçi(FŞ)",
-                                            "pay": "100%",
-                                            "color": "#CE9E82",
-                                            "k2": 1
-                                        }, {
-                                            "id": "L04",
-                                            "from": "1S6JGM9",
-                                            "to": "2303308781",
-                                            "type": "Təşkilat-Direktor(FŞ)",
-                                            "pay": "",
-                                            "color": "#2DB0B0",
-                                            "k2": 0
-                                        }, {
-                                            "id": "L05",
-                                            "from": "1S6JGM9",
-                                            "to": "2303407621",
-                                            "type": "Təşkilat-Təsisçi(FŞ)",
-                                            "pay": "100%",
-                                            "color": "#CE9E82",
-                                            "k2": 1
-                                        }, {
-                                            "id": "L06",
-                                            "from": "2303407621",
-                                            "to": "4R93ZGE",
-                                            "type": "Təşkilat-Direktor(FŞ)",
-                                            "pay": "",
-                                            "color": "#2DB0B0",
-                                            "k2": 0
-                                        }, {
-                                            "id": "L07",
-                                            "from": "2302752871",
-                                            "to": "1S6JGM9",
-                                            "type": "Təşkilat-Təsisçi(FŞ)",
-                                            "pay": "100%",
-                                            "color": "#CE9E82",
-                                            "k2": 1
-                                        }, {
-                                            "id": "L08",
-                                            "from": "1S6JGM9",
-                                            "to": "2302752871",
-                                            "type": "Təşkilat-Direktor(FŞ)",
-                                            "pay": "",
-                                            "color": "#2DB0B0",
-                                            "k2": 0
-                                        }]
-                                    }
-                                },
-                                */
-                                
                                 info: {
                                     enabled: true,
                                     linkContentsFunction: function(itemData, item) {
@@ -311,7 +124,6 @@
                                     }
                                 }
                             });
-                            //this.getInitialNodes();
                         };
                         App.contentsFunction = function(data, node, callback) {
                             var html = "";
@@ -330,13 +142,10 @@
                     PanamaZoom.App = App;
                     App.run();
                 })(PanamaZoom || (PanamaZoom = {}));
-    
-                
-                
+            }).fail(function(jqxhr, textStatus, error) {
+                alert("An error occurred while loading the JSON file: " + error);
             });
         });
-
-        
     </script>
 </body>
 </html>
