@@ -22,6 +22,7 @@
     <script>
 
         $(document).ready(function(){
+            $(window).resize(function(){location.reload();});
             $.getJSON("data/sample.json",function(data){
                 $("body").append("<div class='chartPro'></div>");
                 var ZoomChartsLicense = "ZCP-w4sm9lg0n: Production licence for *.zoomcharts.com";
